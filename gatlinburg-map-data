@@ -1,0 +1,97 @@
+// ======================================================================
+// গ্যাটলিনবার্গ ম্যাপের মূল ডাটাবেজ (GitHub-এ থাকবে, যখন ইচ্ছা এডিট করবেন)
+// ======================================================================
+var mapDatabase = {
+  // ক) বিখ্যাত ক্যাবিন রিভিউ লিংকসমূহ
+  cabins: [
+    {
+      name: "Sunset Ridge Cabin 🌅",
+      lat: "35.7285", lon: "-83.5041", zoom: 15,
+      img: "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=150&q=70",
+      stars: "⭐⭐⭐⭐⭐ 4.8",
+      desc: "Perfect romantic couples retreat with premium hot tub.",
+      tip: "Perfect romantic couples retreat with premium hot tub. ⚠️ <strong>Road Warning:</strong> Fully paved access but has a moderately steep mountain incline [1.2.1].",
+      link: "https://thestylednests.blogspot.com/2026/06/ill-be-honest-with-you-when-i-first.html"
+    },
+    {
+      name: "Bear Creek Lodge 🌲",
+      lat: "35.7143", lon: "-83.5102", zoom: 15,
+      img: "https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&w=150&q=70",
+      stars: "⭐⭐⭐⭐⭐ 4.9",
+      desc: "Family-friendly spacious property with gorgeous creek views.",
+      tip: "Family-friendly spacious property with gorgeous creek views. ✅ <strong>Access:</strong> 100% flat paved road with standard parking driveway [1.2.1].",
+      link: "https://thestylednests.blogspot.com/2026/06/ill-be-honest-with-you-when-i-first.html"
+    },
+    {
+      name: "Smoky Mountain Retreat ⛰️",
+      lat: "35.6985", lon: "-83.4751", zoom: 14,
+      img: "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&w=150&q=70",
+      stars: "⭐⭐⭐⭐☆ 4.2",
+      desc: "Secluded high-altitude cabin offering majestic mountain views.",
+      tip: "Secluded high-altitude cabin offering majestic mountain views. ⚠️ <strong>Access Alert:</strong> Features an extremely steep, narrow gravel road [1.2.1]!",
+      link: "/p/smoky-mountain-retreat.html"
+    }
+  ],
+  
+  // খ) বিখ্যাত স্থানীয় রেস্টুরেন্টসমূহ
+  dining: [
+    {
+      name: "Pancake Pantry 🥞",
+      lat: "35.7107", lon: "-83.5186", zoom: 16,
+      img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=150&q=70",
+      stars: "⭐⭐⭐⭐⭐ 4.8",
+      desc: "Tennessee's oldest pancake house (since 1960) adjacent to The Village.",
+      tip: "Tennessee's oldest pancake house (since 1960) [1.1.5]. Highly recommend trying the Sweet Potato or Pecan pancakes with cinnamon cream [1.1.5]! Cash only.",
+      link: "/p/things-to-do-in-gatlinburg.html"
+    },
+    {
+      name: "Crockett's Breakfast Camp 🍳",
+      lat: "35.7075", lon: "-83.5218", zoom: 16,
+      img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=150&q=70",
+      stars: "⭐⭐⭐⭐⭐ 4.7",
+      desc: "Famous for massive skillet breakfasts and giant fresh cinnamon rolls.",
+      tip: "Famous for massive skillet breakfasts and giant, fresh cinnamon rolls [1.1.6]. Expect a 30-45 minute wait on busy weekend mornings.",
+      link: "/p/things-to-do-in-gatlinburg.html"
+    },
+    {
+      name: "Cherokee Grill 🥩",
+      lat: "35.7061", lon: "-83.5230", zoom: 16,
+      img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=150&q=70",
+      stars: "⭐⭐⭐⭐☆ 4.6",
+      desc: "Gatlinburg's premier upscale steakhouse with cozy mountain lodge vibe.",
+      tip: "Gatlinburg's premier upscale steakhouse on the Parkway [1.1.6]. Great mountain lodge atmosphere, excellent prime rib and local trout.",
+      link: "/p/things-to-do-in-gatlinburg.html"
+    }
+  ],
+  
+  // গ) বিখ্যাত সরকারি ন্যাশনাল পার্ক ভিউ ও ট্রেইলসমূহ
+  sights: [
+    {
+      name: "Cades Cove Valley 🦌🐻",
+      lat: "35.6033", lon: "-83.7828", zoom: 12,
+      img: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=150&q=70",
+      stars: "⭐⭐⭐⭐⭐ 4.9",
+      desc: "An 11-mile scenic loop road. Best place to spot wild black bears.",
+      tip: "An 11-mile scenic loop road. Best place in the Smokies to spot wild black bears and deer [1.2.4]. 💡 <strong>Tip:</strong> Closed to cars on Wednesdays for bicycles [1.2.4].",
+      link: "/p/things-to-do-in-gatlinburg.html"
+    },
+    {
+      name: "Clingmans Dome Peak 🏔️",
+      lat: "35.5628", lon: "-83.4985", zoom: 13,
+      img: "https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?auto=format&fit=crop&w=150&q=70",
+      stars: "⭐⭐⭐⭐⭐ 4.8",
+      desc: "The highest peak in Tennessee offering 360-degree vistas.",
+      tip: "The highest peak in Tennessee (6,643 ft) [1.2.1]. A steep 0.5-mile paved walk leads to 360-degree vistas [1.2.1]. ⚠️ <strong>Tip:</strong> Always bring a light jacket [1.2.1]!",
+      link: "/p/things-to-do-in-gatlinburg.html"
+    },
+    {
+      name: "Roaring Fork Motor Trail 🏞️",
+      lat: "35.7112", lon: "-83.4862", zoom: 14,
+      img: "https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=150&q=70",
+      stars: "⭐⭐⭐⭐⭐ 4.7",
+      desc: "A beautiful, narrow 5.5-mile one-way mountain loop drive.",
+      tip: "A beautiful, narrow 5.5-mile one-way mountain loop stream [1.2.1]. ⚠️ <strong>Road Warning:</strong> Buses and RV trailers are strictly prohibited [1.2.1]!",
+      link: "/p/things-to-do-in-gatlinburg.html"
+    }
+  ]
+};
